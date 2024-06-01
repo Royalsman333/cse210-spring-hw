@@ -2,6 +2,14 @@ using System;
 //Develop 3 Program
 //Jeremy Untch
 //CSE 210 - Spring Semester
+
+
+//As extra credit, I have added a counter which will keep track of how many scriptures the user has memorized. After the scripture is completely hidden, the program will ask the user if they
+//have memorized the scripture or not. If the user says yes, then counter will go up by one. If the user says no, then the counter will not increase.
+//I also added the option to do another scripture or not. If the user does, then the program resets and pulls a new random scripture. The counter will not reset until the program is ended.
+//When the program ends, the program will read off to the user the amount of scriptures that they have memorized.
+
+
 class Program
 {
     //This class will help make values for each word in the scriptures
@@ -93,7 +101,7 @@ class Program
             return true;
         }
 
-        //Reveal all words
+        //This will reveal all words
         public void RevealAllWords()
         {
             foreach (Word word in words)
@@ -102,7 +110,7 @@ class Program
             }
         }
 
-        //Hide all words
+        //This will hide all words
         public void HideAllWords()
         {
             foreach (Word word in words)
@@ -200,7 +208,7 @@ class Program
                         {
                             while (true)
                             {
-                                //This will ask if the user would like to memorize anothe scripture (which will send them back to the top, by getting a new scripture to memorize.)
+                                //This will ask if the user would like to memorize another scripture (which will send them back to the top, by getting a new scripture to memorize.)
                                 Console.Write("\nWould you like to memorize another scripture? (y/n): ");
                                 string another = Console.ReadLine().Trim().ToLower();
 
